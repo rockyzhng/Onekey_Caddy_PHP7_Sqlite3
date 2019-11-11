@@ -290,7 +290,7 @@ if [[ "${ID}" == "centos" ]];then
 else
 
 	echo -e "${OK} ${GreenBG} 正在卸载 php+sqlite 请稍后 ... ${Font}"
-	${INS} ${UNS} php7.0-cgi php7.0-fpm php7.0-curl php7.0-gd php7.0-mbstring php7.0-xml php7.0-sqlite3 sqlite3 -y >/dev/null 2>&1
+	${INS} ${UNS} php7.3-cgi php7.3-fpm php7.3-curl php7.3-gd php7.3-mbstring php7.3-xml php7.3-sqlite3 sqlite3 -y >/dev/null 2>&1
 	${INS} ${UNS} unzip zip -y >/dev/null 2>&1
 	echo -e "${OK} ${GreenBG} 操作已完成 ${Font}"
 
@@ -444,10 +444,10 @@ if [[ "${ID}" == "centos" ]];then
 
 else
 
-	${INS} install php7.0-cgi php7.0-fpm php7.0-curl php7.0-gd php7.0-mbstring php7.0-xml php7.0-sqlite3 sqlite3 -y
+	${INS} install php7.3-cgi php7.3-fpm php7.3-curl php7.3-gd php7.3-mbstring php7.3-xml php7.3-sqlite3 sqlite3 -y
 	judge "php+sqlite3 安装"
 
-	setphp="/run/php/php7.0-fpm.sock"
+	setphp="/run/php/php7.3-fpm.sock"
 	systemctl enable php-fpm
 	systemctl restart php-fpm
 
